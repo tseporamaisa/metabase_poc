@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  db:
+    image: postgres:10
+    container_name: metabase_db
+    env_file: .env-non-dev
+    volumes:
+      - metabase_db_home:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  metabase:
+    image: metabase/metabase
+    container_name: metabase_app
+    env_file: .env-non-dev
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    volumes:
+      - metabase-data:/metabase-data
+    restart: unless-stopped
+
+volumes:
+  metabase_db_home:
+    external: false
+  metabase-data:
+    external: false
