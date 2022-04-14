@@ -1,4 +1,5 @@
-## Running service locally
+## Running service locally    
+---
 
 ### Prerequisites
 
@@ -28,9 +29,10 @@
 
 > **_Note:_** above comand runs superset on http://127.0.0.1:3000    
 
-### Setup
+## Initial setup   
+---
 
-#### Setup user
+### Setup user
 
 - In your browser got to http://127.0.0.1:3000 
 - Click on the "lets get started" button
@@ -38,10 +40,17 @@
 - Names, email, company do not have to be real just fill in anything for testing
 - Enter password (must be at least 6 characters and include at least 1 number)
 
-#### Add data
-- The deployement includes sample data for testing functionality. This step can be skiped by clicking "i'll add my data later"   
+### Add data
+- The deployement includes sample data for testing functionality. This step can be skipped by clicking "i'll add my data later"     
+    
+## Useful links   
+---    
+- [Getting started with metabase](https://www.metabase.com/learn/getting-started/getting-started.html)    
+- [Creating dashboards guide](https://www.metabase.com/learn/dashboards/bi-dashboard-best-practices.html)
+- [Basic tutorial video](https://www.youtube.com/watch?v=4bNp906oOhs&t=259s)
 
 ## Stopping the service    
+---   
     
 ### Stop service without clean-up   
 ```bash
